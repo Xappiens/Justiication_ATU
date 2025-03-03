@@ -4,3 +4,6 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
+
+justification_atu.patches.provincias_custom_field
+justification_atu.patches.municipios_custom_field

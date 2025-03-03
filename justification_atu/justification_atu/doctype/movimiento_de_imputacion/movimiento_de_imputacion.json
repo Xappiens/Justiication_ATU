@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-03 10:33:09.367263",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_date",
+  "column_break_qgfj",
+  "stauts",
+  "company",
+  "doctype_type",
+  "related_doc",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_qgfj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "stauts",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPending\nJustified\nUnjustified\nCancelled"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "doctype_type",
+   "fieldtype": "Link",
+   "label": "Doctype Type",
+   "options": "DocType"
+  },
+  {
+   "depends_on": "eval:doc.doctype_type",
+   "fieldname": "related_doc",
+   "fieldtype": "Dynamic Link",
+   "label": "Related Document",
+   "options": "doctype_type"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Movimiento de Justificacion",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-03-03 10:37:56.991260",
+ "modified_by": "Administrator",
+ "module": "Justification Atu",
+ "name": "Movimiento de Imputacion",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
